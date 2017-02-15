@@ -46,7 +46,7 @@ public class BulletController : MonoBehaviour {
 
     IEnumerator despawnTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 }

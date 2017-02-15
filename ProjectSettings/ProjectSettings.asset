@@ -464,6 +464,7 @@ PlayerSettings:
     Build: 0
     Collab: 0
     ErrorHub: 0
+    Hub: 0
     UNet: 1
   cloudProjectId: 96f4666e-13d6-40e8-a55e-d0be0f7932af
   projectName: 17T1-GAM111.p1
