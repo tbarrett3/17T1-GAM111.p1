@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Boundary
 {
-    public float xMin = -29, xMax = 29;
-    public float yMin = -14, yMax = 14;
+    public float xMin = -48.5f, xMax = 48.5f;
+    public float yMin = -28.5f, yMax = 28.5f;
 }
 
 [System.Serializable]
@@ -59,5 +59,12 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(playerBullet, transform.position, playerBullet.rotation);
         }
+
+        //Constrain the player (boudary)
+        rb.position = new Vector2
+            (
+            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+            Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax)
+            );
     }
 }
